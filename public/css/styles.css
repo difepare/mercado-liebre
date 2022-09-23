@@ -113,12 +113,18 @@ div.offers{
 }
 
 .price{
-    font-size: 18px;
-    flex: 3;
+    
+    font-size: 24px;
+    margin: 0;
+    flex-grow: 3;
 }
 
 .discount{
-    flex: 7;
+    color: green;
+  margin: 0;
+  flex-grow: 7;
+  box-sizing: border-box;
+  padding-top: 5px;
 }
 
 .discount,
@@ -134,7 +140,7 @@ h3,
 
 .description{
     display: none;
-    margin-top: 20px;
+    margin-top: 10px;
 
 }
 
@@ -221,6 +227,10 @@ article div.main-article{
 }
 
 @media (min-width: 769px){
+    .img-header {
+        width: 2%;
+        margin-right: 2vh;
+    }
     main section div.products article{
         width: 22%;
     }
@@ -239,10 +249,10 @@ header .form .input p{
 }
 header div.top-header {
     display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        align-items: flex-start;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
     
     
 }
@@ -275,15 +285,23 @@ header nav ul {
     transform: rotateZ(-90deg);
 }
 
-main section article .description{
+.description{
+    font-size: 16px;
+    padding: 15px;
+    padding-bottom: 2px;
+    color: #666;
     display: none;
-    transition: all;
+    width: 100%;
+    
+    visibility: hidden;
 } 
 
-main section article .description:hover{
-    transform: all;
+.main-article:hover .description {
+
+    visibility: visible;
+    transition-duration: 0,5s;
     
-} 
+}
 
 
 :hover div.products img{
